@@ -8,6 +8,42 @@ All of Claude Code's tools work — bash, file read/write/edit, grep, glob, agen
 
 ---
 
+## Install
+
+### Option A: npm (recommended)
+
+```bash
+npm install -g openclaude
+```
+
+### Option B: From source (requires Bun)
+
+```bash
+# Clone from gitlawb
+git clone https://node.gitlawb.com/z6MkqDnb7Siv3Cwj7pGJq4T5EsUisECqR8KpnDLwcaZq5TPr/openclaude.git
+cd openclaude
+
+# Install dependencies
+bun install
+
+# Build
+bun run build
+
+# Link globally (optional)
+npm link
+```
+
+### Option C: Run directly with Bun (no build step)
+
+```bash
+git clone https://node.gitlawb.com/z6MkqDnb7Siv3Cwj7pGJq4T5EsUisECqR8KpnDLwcaZq5TPr/openclaude.git
+cd openclaude
+bun install
+bun run dev
+```
+
+---
+
 ## Quick Start
 
 ### 1. Set 3 environment variables
@@ -18,10 +54,16 @@ export OPENAI_API_KEY=sk-your-key-here
 export OPENAI_MODEL=gpt-4o
 ```
 
-### 2. Run Claude Code
+### 2. Run it
 
 ```bash
-claude
+# If installed via npm
+openclaude
+
+# If built from source
+bun run dev
+# or after build:
+node dist/cli.mjs
 ```
 
 That's it. The tool system, streaming, file editing, multi-step reasoning — everything works through the model you picked.
