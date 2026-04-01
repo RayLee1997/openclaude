@@ -1,0 +1,10 @@
+{
+  "_comment_model": "LLM model for Marker conversion. Options: gemini-2.0-flash | gemini-2.5-flash | gemini-3-flash-preview",
+  "gemini_model_name": "gemini-3-flash-preview",
+
+  "_comment_llm": "Enable LLM enhancement for 10-15% accuracy improvement (requires GOOGLE_API_KEY)",
+  "use_llm": true,
+
+  "_comment_format": "Output format: markdown | json | html | chunks",
+  "output_format": "markdown"
+}
